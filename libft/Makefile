@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/29 12:38:27 by aperraul          #+#    #+#              #
-#    Updated: 2016/04/05 11:30:01 by aperraul         ###   ########.fr        #
+#    Updated: 2016/06/13 16:07:52 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,6 @@ SRCS = ft_atoi.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
 	   ft_lstnew.c \
-	   tab_pt_alloc_del.c \
 	   list.c
 
 OBJECTS = ft_atoi.o \
@@ -133,7 +132,6 @@ OBJECTS = ft_atoi.o \
 		  ft_lstiter.o \
 		  ft_lstmap.o \
 		  ft_lstnew.o \
-		  tab_pt_alloc_del.o \
 		  list.o \
 
 FLAGS = -Wall -Wextra -Werror

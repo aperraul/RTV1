@@ -1,0 +1,41 @@
+RTv1 scene exemple:
+
+#Scene#
+	###Cam
+		posx posy posz
+		dirx diry dirz
+	###Objects
+		##spot 1
+			posx posy posz / intensitee
+		##shere 3
+			posx posy posz / rayon / color / rotx roty rotz
+			"                                             "
+			"                                             "
+		##cylindre 2
+			posx posy posz / size.base / height / color / rotx roty rotz
+			"                                                          "
+		##cone 1
+			posx posy posz / size.base / height / color / rotx roty rotz
+		##plan 2
+			posx posy posz / size / color / rotx roty rotz
+			"                                            "
+		#objet suivant nb_obj
+			#position(xyz) / dimentions / color / rotations(xyz)
+#End#
+
+!\/\/rules\/\/!
+#Scene# -> start
+#End# -> end
+### -> categorie (Cam and Objects)
+## -> objects (object list)
+# -> comments
+
+objects list:
+- spot
+- sphere
+- cylindre
+- cone
+- plan
+- cube
+
+create by: cchameyr, lgatibel, aperraul;

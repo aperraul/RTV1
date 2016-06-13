@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/27 15:26:56 by aperraul          #+#    #+#              #
-#    Updated: 2016/05/10 12:12:43 by aperraul         ###   ########.fr        #
+#    Updated: 2016/06/13 16:05:39 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,6 @@ SRCS = draw_line.c \
 	   make_matrix.c \
 	   mlx_init.c \
 	   new_image.c \
-	   ft_del_tab_pts.c \
 	   ft_clear_mlx.c \
 	   ft_reset_img.c \
 	   rgb_hexa_convert.c \
@@ -45,7 +44,6 @@ OBJS = draw_line.o \
 	   make_matrix.o \
 	   mlx_init.o \
 	   new_image.o \
-	   ft_del_tab_pts.o \
 	   ft_clear_mlx.o \
 	   ft_reset_img.o \
 	   rgb_hexa_convert.o \

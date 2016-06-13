@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 14:57:31 by aperraul          #+#    #+#             */
-/*   Updated: 2016/05/10 12:11:48 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/13 16:04:49 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,13 +105,20 @@ typedef struct	s_3dpt
 	int			z;
 }				t_3dpt;
 
+typedef struct	s_3dptd
+{
+	double		x;
+	double		y;
+	double		z;
+}
+
 t_mlx			*ft_mlx_init(t_mlx *mlx, int size_x, int size_y, char *title);
 void			ft_new_image(t_mlx *mlx);
 void			ft_draw_pixel(t_mlx *mlx, int color, t_pt pt);
 t_pt			ft_make_pt(int x, int y);
 t_pt			ft_apply_matrix(t_3dpt pt, t_matrix m);
 t_3dpt			ft_make_3dpt(int x, int y, int z);
-t_3dpt			**ft_del_tab_pts(t_3dpt **tab);
+t_3dptd			ft_make_3dptd(double x, double y, double z);
 t_line			ft_make_line(int x1, int y1, int x2, int y2);
 t_vector		ft_make_vector(float x, float y, float z);
 t_matrix		ft_make_matrix_x(float rad);
@@ -120,7 +127,6 @@ t_matrix		ft_make_matrix_z(float rad);
 t_matrix		ft_multiply_matrix(t_matrix m1, t_matrix m2);
 t_matrix		ft_init_matrix(t_pt pos);
 void			ft_draw_line(t_line line, t_mlx *mlx, int color);
-void			ft_draw_circle(t_mlx *mlx, t_pt center, int size, int color);
 void			ft_clear_mlx(t_mlx *mlx);
 void			ft_flush_img(t_mlx *x);
 void			ft_reset_img(t_mlx *mlx, int color);
