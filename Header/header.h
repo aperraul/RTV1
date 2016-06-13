@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 11:08:05 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/13 12:41:02 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/13 14:40:56 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ typedef struct	s_cone
 
 typedef struct	s_geo_form
 {
-	t_sphere	shere;
-	t_cylindre	cylindre;
-	t_plan		plan;
-	t_cone		cone;
+	t_sphere	*shere;
+	t_cylindre	*cylindre;
+	t_plan		*plan;
+	t_cone		*cone;
 }				t_geo_form;
 
 typedef struct	s_env
