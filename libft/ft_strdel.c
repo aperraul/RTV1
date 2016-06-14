@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/26 19:01:26 by aperraul          #+#    #+#             */
+/*   Updated: 2016/04/04 15:29:35 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void	ft_strdel(char **as)
 {
-	int			ret;
-	t_rtv1		*rtv1;
-
-	rtv1 = NULL;
-	if (argc == 2)
+	if (as)
 	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
+		free(*as);
+		*as = NULL;
 	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
 }

@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/23 17:15:36 by aperraul          #+#    #+#             */
+/*   Updated: 2016/04/04 15:29:42 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+char	*ft_strdup(char *s1)
 {
-	int			ret;
-	t_rtv1		*rtv1;
+	int		cpt;
+	char	*s2;
 
-	rtv1 = NULL;
-	if (argc == 2)
+	cpt = 0;
+	s2 = ft_strnew(ft_strlen(s1));
+	if (!s2)
+		return (NULL);
+	while (s1[cpt])
 	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
+		s2[cpt] = s1[cpt];
+		cpt++;
 	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+	s2[cpt] = '\0';
+	return (s2);
 }

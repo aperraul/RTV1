@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/24 23:22:19 by aperraul          #+#    #+#             */
+/*   Updated: 2016/04/04 15:28:19 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	int			ret;
-	t_rtv1		*rtv1;
+	char	*d;
+	char	*s;
 
-	rtv1 = NULL;
-	if (argc == 2)
+	if (dest == src && !len)
+		return (NULL);
+	d = (char *)dest;
+	s = (char *)src;
+	if (d > s)
 	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
-	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
+		while (len--)
+			d[len] = s[len];
 	}
 	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+		dest = ft_memcpy(dest, (void *)src, len);
+	return (dest);
 }

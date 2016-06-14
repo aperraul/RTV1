@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/23 16:41:06 by aperraul          #+#    #+#             */
+/*   Updated: 2015/11/29 14:59:27 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int			ret;
-	t_rtv1		*rtv1;
+	int		cpt1;
+	size_t	cpt2;
 
-	rtv1 = NULL;
-	if (argc == 2)
+	cpt1 = 0;
+	cpt2 = 0;
+	while (dest[cpt1] != '\0')
+		cpt1++;
+	while (cpt2 < n)
 	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
+		if (src[cpt2] != '\0')
+			dest[cpt1] = src[cpt2];
+		cpt1++;
+		cpt2++;
 	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+	dest[cpt1] = '\0';
+	return (dest);
 }

@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/23 16:11:02 by aperraul          #+#    #+#             */
+/*   Updated: 2015/12/03 14:25:50 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int			ret;
-	t_rtv1		*rtv1;
+	size_t			cpt;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	rtv1 = NULL;
-	if (argc == 2)
-	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	cpt = 0;
+	while (str1[cpt] == str2[cpt] && str1[cpt] != '\0'
+			&& str2[cpt] != '\0' && cpt < n)
+		cpt++;
+	if (cpt == n)
 		return (0);
-	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+	return (str1[cpt] - str2[cpt]);
 }

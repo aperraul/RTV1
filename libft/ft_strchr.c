@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Created: 2015/11/24 16:38:21 by aperraul          #+#    #+#             */
+/*   Updated: 2015/11/25 18:32:36 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Header/header.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+char	*ft_strchr(const char *s, int c)
 {
-	int			ret;
-	t_rtv1		*rtv1;
+	char	chr;
+	int		cpt;
 
-	rtv1 = NULL;
-	if (argc == 2)
-	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
-	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+	cpt = 0;
+	chr = (char)c;
+	while (s[cpt] && s[cpt] != chr)
+		cpt++;
+	if (s[cpt] == chr)
+		return ((char *)&s[cpt]);
+	return (NULL);
 }
