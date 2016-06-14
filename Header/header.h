@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:25:24 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 15:04:58 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,25 @@
 
 typedef struct	s_cam
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	t_vector	dir;
 }				t_cam;
 
 typedef struct	s_spot
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	int			lux;
 }				t_spot;
 
 typedef struct	s_sphere
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	double		r;
 	int			color;
 	t_vector	rot;
@@ -41,7 +47,9 @@ typedef struct	s_sphere
 
 typedef struct	s_cylindre
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	double		base_size;
 	double		height;
 	int			color;
@@ -50,15 +58,20 @@ typedef struct	s_cylindre
 
 typedef struct	s_plan
 {
-	t_3dptd		pos;
-	t_ptd		size;
+	double		posx;
+	double		posy;
+	double		posz;
+	double		withd;
+	double		height;
 	int			color;
 	t_vector	rot;
 }				t_plan;
 
 typedef struct	s_cone
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	double		base_size;
 	double		height;
 	int			color;
@@ -67,7 +80,9 @@ typedef struct	s_cone
 
 typedef struct	s_cube
 {
-	t_3dptd		pos;
+	double		posx;
+	double		posy;
+	double		posz;
 	double		size;
 	int			color;
 	t_vector	rot;
@@ -100,6 +115,8 @@ typedef struct	s_rtv1
 }				t_rtv1;
 
 int				main(int argc, char **argv);
-t_rtv1			ft_rtv1_init(void);
+t_rtv1			*ft_rtv1_init(void);
+void			ft_get_scene(t_rtv1 *rtv1, int ret);
+void			ft_del_rtv1(t_rtv1 *rtv1);
 
 #endif

@@ -6,13 +6,19 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 12:37:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:25:36 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 14:52:10 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/header.h"
 
-t_rtv1		ft_rtv1_init(void)
+void		ft_del_rtv1(t_rtv1 *rtv1)
+{
+	if (rtv1)
+		free(rtv1);
+}
+
+t_rtv1		*ft_rtv1_init(void)
 {
 	t_rtv1		*rtv1;
 
@@ -24,5 +30,5 @@ t_rtv1		ft_rtv1_init(void)
 	rtv1->obj.plan = NULL;
 	rtv1->obj.cone = NULL;
 	rtv1->obj.cube = NULL;
-	return (*rtv1);
+	return (rtv1);
 }

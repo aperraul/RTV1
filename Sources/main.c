@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:06:08 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 14:51:08 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		main(int argc, char **argv)
 		return (0);
 	}
 		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
+		ft_get_scene(rtv1);
 	}
 	else
 		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
