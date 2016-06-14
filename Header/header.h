@@ -6,15 +6,18 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 11:08:05 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 11:06:31 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 12:55:29 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../gnl/get_next_line.h"
-#include "../Libgraph/libgraph.h"
-#include "../libft/libft.h"
-#include <fcntl.h>
-#include "../SDL2-2.0.4/include/SDL.h"
+#ifndef HEADER_H
+# define HEADER_H
+
+# include "../gnl/get_next_line.h"
+# include "../Libgraph/libgraph.h"
+# include "../libft/libft.h"
+# include <fcntl.h>
+# include "../SDL2-2.0.4/include/SDL.h"
 
 typedef struct	s_cam
 {
@@ -97,3 +100,6 @@ typedef struct	s_rtv1
 }				t_rtv1;
 
 int				main(int argc, char **argv);
+t_rtv1			ft_rtv1_init(void);
+
+#endif

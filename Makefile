@@ -23,9 +23,11 @@ XORGDEV = $(shell dpkg -s xorg-dev 2>&-)
 NAME =				rtv1
 
 SRC =				./Sources/main.c \
+					./Sources/rtv1_init.c \
 
 
 OBJS =				./main.o \
+					./rtv1_init.o \
 
 
 LIBFT =				./libft/libft.a

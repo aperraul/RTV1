@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rtv1_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 12:47:57 by aperraul         ###   ########.fr       */
+/*   Created: 2016/06/14 12:37:34 by aperraul          #+#    #+#             */
+/*   Updated: 2016/06/14 12:59:52 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Header/header.h"
 
-int		main(int argc, char **argv)
+t_rtv1		ft_rtv1_init(void)
 {
-	int			ret;
 	t_rtv1		*rtv1;
 
-	rtv1 = NULL;
-	if (argc == 2)
-	{
-	if ((ret = open(argv[1], O_RDONLY)) == -1)
-	{
-		ft_putstr("file error");
-		return (0);
-	}
-		rtv1 = ft_rtv1_init();
-		// ft_get_scene;
-	}
-	else
-		ft_putstr("nb d'arguments != 1\nusage : ./rtv1 scene");
-	return (0);
+	rtv1 = (t_rtv1 *)ft_memalloc(sizeof(t_rtv1));
+	rtv1->env = NULL;
+	rtv1->obj.spot = NULL;
+	rtv1->obj.sphere = NULL;
+	rtv1->obj.cylindre = NULL;
+	rtv1->obj.plan = NULL;
+	rtv1->obj.cone = NULL;
+	rtv1->obj.cube = NULL;
+	return (rtv1);
 }
