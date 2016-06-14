@@ -6,12 +6,12 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 11:08:05 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/13 15:58:35 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 11:06:31 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../gnl/get_next_line.h"
-#include "../Libdraw/libdraw.h"
+#include "../Libgraph/libgraph.h"
 #include "../libft/libft.h"
 #include <fcntl.h>
 #include "../SDL2-2.0.4/include/SDL.h"
