@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 12:37:34 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 12:59:52 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 13:25:36 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ t_rtv1		ft_rtv1_init(void)
 	rtv1->obj.plan = NULL;
 	rtv1->obj.cone = NULL;
 	rtv1->obj.cube = NULL;
-	return (rtv1);
+	return (*rtv1);
 }

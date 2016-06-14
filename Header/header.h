@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 13:04:50 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/14 13:25:24 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ typedef struct	s_cube
 typedef struct	s_object
 {
 	t_spot		*spot;
-	t_sphere	*shere;
+	t_sphere	*sphere;
 	t_cylindre	*cylindre;
 	t_plan		*plan;
 	t_cone		*cone;
