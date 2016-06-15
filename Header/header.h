@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/15 15:17:18 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/15 17:35:16 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,8 @@ t_rtv1			*ft_rtv1_init(void);
 void			ft_get_scene(t_rtv1 *rtv1, int ret);
 int				ft_scene(t_lstline *list, t_rtv1 *rtv1);
 int				ft_get_cam(t_lstline *list, t_rtv1 *rtv1);
+int				ft_cam_lines(char **tab, char *line);
+int				ft_check_pos_value(char *tab);
 
 void			ft_del_rtv1(t_rtv1 *rtv1);
 

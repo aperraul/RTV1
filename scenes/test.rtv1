@@ -1,7 +1,7 @@
 #Scene#
 	###Cam
-		posx posy posz
-		dirx diry dirz
+		12.3 400 12
+		2 3 4
 	###Objects
 		##spot 1
 			posx posy posz / intensitee
