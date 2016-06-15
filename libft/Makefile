@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/29 12:38:27 by aperraul          #+#    #+#              #
-#    Updated: 2016/06/13 16:07:52 by aperraul         ###   ########.fr        #
+#    Updated: 2016/06/15 13:58:16 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = ft_atoi.c \
 	   ft_memlen.c \
 	   ft_memmove.c \
 	   ft_memset.c \
+	   ft_power.c \
 	   ft_putchar.c \
 	   ft_putchar_fd.c \
 	   ft_putendl.c \
@@ -90,6 +91,7 @@ OBJECTS = ft_atoi.o \
 		  ft_memlen.o \
 		  ft_memmove.o \
 		  ft_memset.o \
+		  ft_power.o \
 		  ft_putchar.o \
 		  ft_putchar_fd.o \
 		  ft_putendl.o \

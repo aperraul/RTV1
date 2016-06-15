@@ -24,10 +24,14 @@ NAME =				rtv1
 
 SRC =				./Sources/main.c \
 					./Sources/rtv1_init.c \
+					./Sources/get_scene.c \
+					./gnl/get_next_line.c \
 
 
 OBJS =				./main.o \
 					./rtv1_init.o \
+					./get_scene.o \
+					./get_next_line.o \
 
 
 LIBFT =				./libft/libft.a

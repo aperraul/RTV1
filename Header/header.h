@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/14 15:04:58 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/15 15:17:18 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,9 @@ typedef struct	s_rtv1
 int				main(int argc, char **argv);
 t_rtv1			*ft_rtv1_init(void);
 void			ft_get_scene(t_rtv1 *rtv1, int ret);
+int				ft_scene(t_lstline *list, t_rtv1 *rtv1);
+int				ft_get_cam(t_lstline *list, t_rtv1 *rtv1);
+
 void			ft_del_rtv1(t_rtv1 *rtv1);
 
 #endif
