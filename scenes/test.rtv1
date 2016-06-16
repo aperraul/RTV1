@@ -1,7 +1,7 @@
 #Scene#
 	###Cam
 		4.3455 9875 2345.2345
-		-4 -5 -6.345
+		-4 -5
 	###Objects
 		##spot 1
 			posx posy posz / intensitee

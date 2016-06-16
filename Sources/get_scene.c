@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 14:49:25 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/16 15:46:11 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/16 16:32:01 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	ft_del_tab(char **tab)
 	while (tab[++i])
 		ft_memdel((void **)&tab[i]);
 	free(tab);
+	tab = NULL;
 }
 
 char		**ft_get_3d_val(char *line)
@@ -59,10 +60,18 @@ char		**ft_get_3d_val(char *line)
 		;
 	tab = ft_strsplit(&line[i], ' ');
 	if (ft_memlen((void **)(tab)) != 3)
+	{
 		ft_del_tab(tab);
+		tab = NULL;
+		return (tab);
+	}
 	if (ft_check_3d_value(tab[0]) != 0 && ft_check_3d_value(tab[1]) != 0 &&
 			ft_check_3d_value(tab[2]) != 0)
+	{
 		ft_del_tab(tab);
+		tab = NULL;
+		return (tab);
+	}
 	return (tab);
 }
 
@@ -80,10 +89,10 @@ int		ft_get_cam(t_lstline *list, t_rtv1 *rtv1)
 		ft_putstr("scene syntaxe error line 2");
 		return (1);
 	}
-	if (list->line[0] != '\t' || list->line[1] != '\t' || (str1 = ft_get_3d_val(list->line)) == NULL)
+	if ((str1 = ft_get_3d_val(list->line)) == NULL)
 		return (1);
 	list = list->next;
-	if (list->line[0] != '\t' || list->line[1] != '\t' || (str2 = ft_get_3d_val(list->line)) == NULL)
+	if ((str2 = ft_get_3d_val(list->line)) == NULL)
 		return (1);
 	rtv1->cam.posx = ft_atoid(str1[0]);
 	rtv1->cam.posy = ft_atoid(str1[1]);
@@ -133,6 +142,7 @@ void	ft_get_scene(t_rtv1 *rtv1, int ret)
 	}
 	if (ft_scene(list, rtv1) > 0)
 	{
+		ft_putendl("file syntaxe error");
 		ft_lstline_del(list);
 		ft_del_rtv1(rtv1);
 		exit(0);
