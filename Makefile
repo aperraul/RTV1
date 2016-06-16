@@ -44,7 +44,7 @@ MAKEFILESDL =		$(shell ls SDL2-2.0.4/Makefile 2>&-)
 
 DEBUGSEGFAULT =		-fsanitize=address
 
-EXTRAFLAGS =		-Wall -Wextra -Werror #$(DEBUGSEGFAULT)
+EXTRAFLAGS =		-Wall -Wextra -Werror $(DEBUGSEGFAULT)
 
 CC =				gcc
 
