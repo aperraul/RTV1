@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 14:49:25 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/17 14:17:58 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/17 15:22:38 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,22 +63,22 @@ char		**ft_get_3d_val(char *line)
 	return (tab);
 }
 
-int		ft_get_cam(t_lstline *list, t_rtv1 *rtv1, int *line_nb)
+int		ft_get_cam(t_lstline **list, t_rtv1 *rtv1, int *line_nb)
 {
 	char	**str1;
 	char	**str2;
 
 	str1 = NULL;
 	str2 = NULL;
-	if ((*line_nb += 1) && list->line &&
-			(ft_strcmp(list->line, "\t###Cam") == 0))
-		list = list->next;
+	if ((*line_nb += 1) && (*list)->line &&
+			(ft_strcmp((*list)->line, "\t###Cam") == 0))
+		*list = (*list)->next;
 	else
 		return (ft_syntaxe_error(*line_nb));
-	if ((*line_nb += 1) && (str1 = ft_get_3d_val(list->line)) == NULL)
+	if ((*line_nb += 1) && (str1 = ft_get_3d_val((*list)->line)) == NULL)
 		return (ft_syntaxe_error(*line_nb));
-	list = list->next;
-	if ((*line_nb += 1) && (str2 = ft_get_3d_val(list->line)) == NULL)
+	*list = (*list)->next;
+	if ((*line_nb += 1) && (str2 = ft_get_3d_val((*list)->line)) == NULL)
 		return (ft_syntaxe_error(*line_nb));
 	rtv1->cam.posx = ft_atoid(str1[0]);
 	rtv1->cam.posy = ft_atoid(str1[1]);
@@ -97,9 +97,11 @@ int		ft_scene(t_lstline *list, t_rtv1 *rtv1, int *line_nb)
 		list = list->next;
 	else
 		return (ft_syntaxe_error(*line_nb));
-	if (ft_get_cam(list, rtv1, line_nb) != 0)
+	if (ft_get_cam(&list, rtv1, line_nb) != 0)
 		return (1);
-
+	list = list->next;
+	if (ft_get_obj(&list, rtv1, line_nb) != 0)
+		return (1);
 	return (0);
 }
 
