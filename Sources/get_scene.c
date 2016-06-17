@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 14:49:25 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/16 16:32:01 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/17 11:31:12 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,25 @@ int		ft_check_3d_value(char *tab)
 	while (tab[i])
 	{
 		if (ft_isdigit(tab[i]) == 1)
-			i++;
-		else if (tab[i++] == '.')
 		{
+			ft_putendl("yolo1");
+			i++;
+		}
+		else if (tab[i] == '.')
+		{
+			ft_putendl("yolo2");
 			dot++;
 			if (dot > 1)
 				return (1);
+			i++;
 		}
 		else
+		{
+			ft_putendl("yolo3");
 			return (1);
+		}
 	}
 	return (0);
-}
-
-void	ft_del_tab(char **tab)
-{
-	int i;
-
-	i = -1;
-	while (tab[++i])
-		ft_memdel((void **)&tab[i]);
-	free(tab);
-	tab = NULL;
 }
 
 char		**ft_get_3d_val(char *line)
@@ -61,15 +58,13 @@ char		**ft_get_3d_val(char *line)
 	tab = ft_strsplit(&line[i], ' ');
 	if (ft_memlen((void **)(tab)) != 3)
 	{
-		ft_del_tab(tab);
-		tab = NULL;
+		ft_memdel2((void ***)&tab);
 		return (tab);
 	}
-	if (ft_check_3d_value(tab[0]) != 0 && ft_check_3d_value(tab[1]) != 0 &&
+	if (ft_check_3d_value(tab[0]) != 0 || ft_check_3d_value(tab[1]) != 0 ||
 			ft_check_3d_value(tab[2]) != 0)
 	{
-		ft_del_tab(tab);
-		tab = NULL;
+		ft_memdel2((void ***)&tab);
 		return (tab);
 	}
 	return (tab);
