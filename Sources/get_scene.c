@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 14:49:25 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/17 15:22:38 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/19 12:16:25 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void	ft_get_scene(t_rtv1 *rtv1, int ret)
 
 	line = NULL;
 	list = NULL;
-	line_nb = 0;
+	line_nb = 1;
 	while ((t = get_next_line(ret, &line)) == 1)
 		list = ft_add_list(list, line);
 	if (t == -1)

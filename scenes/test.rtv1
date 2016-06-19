@@ -4,7 +4,7 @@
 		-4 -5 234
 	###Objects
 		##spot 1
-			posx posy posz / intensitee
+		77 55 -11 / 44
 		##shere 3
 			posx posy posz / rayon / color / rotx roty rotz
 			"                                             "

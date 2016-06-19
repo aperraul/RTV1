@@ -28,6 +28,7 @@ SRC =				./Sources/main.c \
 					./gnl/get_next_line.c \
 					./Sources/ft_syntaxe_error.c \
 					./Sources/get_obj.c \
+					./Sources/get_spot.c \
 
 
 OBJS =				./main.o \
@@ -36,6 +37,7 @@ OBJS =				./main.o \
 					./get_next_line.o \
 					./ft_syntaxe_error.o \
 					./get_obj.o \
+					./get_spot.o \
 
 
 LIBFT =				./libft/libft.a
