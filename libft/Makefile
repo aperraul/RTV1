@@ -6,7 +6,7 @@
 #    By: aperraul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/29 12:38:27 by aperraul          #+#    #+#              #
-#    Updated: 2016/06/15 13:58:16 by aperraul         ###   ########.fr        #
+#    Updated: 2016/06/19 15:49:48 by aperraul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRCS = ft_atoi.c \
 	   ft_strnstr.c \
 	   ft_strrchr.c \
 	   ft_strsplit.c \
+	   ft_strsplitstr.c \
 	   ft_strstr.c \
 	   ft_strsub.c \
 	   ft_strtrim.c \
@@ -123,6 +124,7 @@ OBJECTS = ft_atoi.o \
 		  ft_strnstr.o \
 		  ft_strrchr.o \
 		  ft_strsplit.o \
+		  ft_strsplitstr.o \
 		  ft_strstr.o \
 		  ft_strsub.o \
 		  ft_strtrim.o \

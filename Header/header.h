@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/19 12:13:43 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/20 12:30:07 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct	s_spot
 	double		posx;
 	double		posy;
 	double		posz;
-	int			lux;
+	double		lux;
 }				t_spot;
 
 typedef struct	s_sphere
@@ -42,7 +42,6 @@ typedef struct	s_sphere
 	double		posz;
 	double		r;
 	int			color;
-	t_vector	rot;
 }				t_sphere;
 
 typedef struct	s_cylindre
@@ -112,6 +111,12 @@ typedef struct	s_rtv1
 	t_env		*env;
 	t_cam		cam;
 	t_object	obj;
+	int			nb_spot;
+	int			nb_sph;
+	int			nb_cyl;
+	int			nb_plan;
+	int			nb_cone;
+	int			nb_cube;
 }				t_rtv1;
 
 int				main(int argc, char **argv);

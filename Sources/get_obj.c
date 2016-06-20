@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 14:54:28 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/19 12:22:50 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/20 12:33:56 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int		ft_get_obj_val(t_rtv1 *rtv1, int type, t_lstline **list, int *line_nb)
 {
 	if (type == 2)
 		return (ft_get_spot(rtv1, list, line_nb));
-//	else if (type == 3)
-//		return (ft_get_sphere(rtv1, list, line_nb));
+	else if (type == 3)
+		return (ft_get_sphere(rtv1, list, line_nb));
 //	else if (type == 4)
 //		return (ft_get_cylindre(rtv1, list, line_nb));
 //	else if (type == 5)
@@ -35,16 +35,16 @@ int		ft_strcheck(char *str)
 		return (1);
 	else if (ft_strncmp(str, "\t\t##spot ", 9) == 0)
 		return (2);
-//	else if (ft_strncmp(str, "\t\t##sphere ", 11) == 0)
-//		return (3);
-//	else if (ft_strncmp(str, "\t\t##cylindre ", 13) == 0)
-//		return (4);
-//	else if (ft_strncmp(str, "\t\t##cone ", 9) == 0)
-//		return (5);
-//	else if (ft_strncmp(str, "\t\t##plan ", 9) == 0)
-//		return (6);
-//	else if (ft_strncmp(str, "\t\t##cube ", 9) == 0)
-//		return (7);
+	else if (ft_strncmp(str, "\t\t##sphere ", 11) == 0)
+		return (3);
+	else if (ft_strncmp(str, "\t\t##cylindre ", 13) == 0)
+		return (4);
+	else if (ft_strncmp(str, "\t\t##cone ", 9) == 0)
+		return (5);
+	else if (ft_strncmp(str, "\t\t##plan ", 9) == 0)
+		return (6);
+	else if (ft_strncmp(str, "\t\t##cube ", 9) == 0)
+		return (7);
 	else
 		return (0);
 }

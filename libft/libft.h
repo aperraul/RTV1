@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:22:00 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/17 10:45:36 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/19 15:49:12 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ char			*ft_strsub(char const *s1, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplitstr(char *str, const char *split);
 char			*ft_itoa(int n);
 int				ft_power(int nb, int pow);
 void			ft_putchar(char c);
