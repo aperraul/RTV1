@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/20 12:30:07 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:36:12 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,10 +129,11 @@ char			**ft_get_3d_val(char *line);
 int				ft_check_3d_value(char *tab);
 int				ft_syntaxe_error(int line_nb);
 int				ft_strcheck(char *str);
-int				ft_get_obj_val(t_rtv1 *rtv1, int type, t_lstline **list, int *nb_line);
+int				ft_get_obj_val(t_rtv1 *rtv1, int type,
+		t_lstline **list, int *nb_line);
 int				ft_get_spot(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
 int				ft_get_sphere(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
-int				ft_get_cylindre(t_rtv1 *rtv1, t_lstline **list , int *line_nb);
+int				ft_get_cylindre(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
 int				ft_get_cone(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
 int				ft_get_plan(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
 int				ft_get_cube(t_rtv1 *rtv1, t_lstline **list, int *line_nb);

@@ -29,7 +29,11 @@ SRC =				./Sources/main.c \
 					./Sources/ft_syntaxe_error.c \
 					./Sources/get_obj.c \
 					./Sources/get_spot.c \
-
+					./Sources/get_cone.c \
+					./Sources/get_cube.c \
+					./Sources/get_cylindre.c \
+					./Sources/get_plan.c \
+					./Sources/get_sphere.c \
 
 OBJS =				./main.o \
 					./rtv1_init.o \
@@ -38,6 +42,11 @@ OBJS =				./main.o \
 					./ft_syntaxe_error.o \
 					./get_obj.o \
 					./get_spot.o \
+					./get_cone.o \
+					./get_cube.o \
+					./get_cylindre.o \
+					./get_plan.o \
+					./get_sphere.o \
 
 
 LIBFT =				./libft/libft.a

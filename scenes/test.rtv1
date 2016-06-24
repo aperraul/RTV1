@@ -3,38 +3,20 @@
 		4.3455 9875 2345.2345
 		-4 -5 234
 	###Objects
+		##sphere 3
+			1 2 3 / 4 / 0x666666
+			5 6 7 / 8 / 0x366666
+			555 55 5 / 9 / 0x466666
+		##plan 2
+			4 216 4 / 7 / 9.9 / 0x0000ff / 6 6 6
+			4 2 6 / 7 / 9.9 / ffffff / 6 6 6 
 		##spot 2
 		77 55 -11 / 44
 		55.5 55 -11 / 45.7
-		##shere 3
-			posx posy posz / rayon / color
-			"                                             "
-			"                                             "
 		##cylindre 2
-			posx posy posz / size.base / height / color / rotx roty rotz
-			"                                                          "
-		##cone 1
-			posx posy posz / size.base / height / color / rotx roty rotz
-		##plan 2
-			posx posy posz / size / color / rotx roty rotz
-			"                                            "
-		#objet suivant nb_obj
-			#position(xyz) / dimentions / color / rotations(xyz)
+			4 4 5 / 10.1 / 10.1 / 0x555555 / 0 0 0
+			4 4 5 / 10.1 / 10.1 / 0x555555 / 0 0 0
+		##cone 2
+			1 1 1 / 2 / 3 / 0x111111 / 3 3 3
+			2 2 2 / 5.4 / 32 / 0xffaabb / 0 0 0
 #End#
-
-!\/\/rules\/\/!
-#Scene# -> start
-#End# -> end
-### -> categorie (Cam and Objects)
-## -> objects (object list)
-# -> comments
-
-objects list:
-- spot
-- sphere
-- cylindre
-- cone
-- plan
-- cube
-
-create by: cchameyr, lgatibel, aperraul;

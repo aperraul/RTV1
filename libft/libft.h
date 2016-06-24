@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:22:00 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/19 15:49:12 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/06/24 16:29:47 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ typedef	struct	s_pt
 }				t_pt;
 
 void			ft_bzero(void *s, size_t n);
+int				ft_abs(int a);
+double			ft_absd(double a);
 void			*ft_memset(void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -57,12 +59,17 @@ char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *s1, const char *s2);
 int				ft_atoi(const char *str);
+int				ft_atoi_base(const char *str, int base);
 double			ft_atoid(char *str);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
+int				ft_isdouble(char *str);
+int				ft_ishexa(int c);
+int				ft_strishexa(char *str);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
+int				ft_isescseq(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
