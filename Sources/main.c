@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 11:07:38 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/24 18:55:43 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/08/10 12:52:27 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		main(int argc, char **argv)
 				rtv1->obj.plan[1].withd, rtv1->obj.plan[1].height, rtv1->obj.plan[1].color,
 				rtv1->obj.plan[1].rot.x, rtv1->obj.plan[1].rot.y, rtv1->obj.plan[1].rot.z);
 
-
+	ft_rtv1(rtv1);
 
 
 

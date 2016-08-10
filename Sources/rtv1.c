@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_matrix.c                                   :+:      :+:    :+:   */
+/*   rtv1.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/06 12:32:09 by aperraul          #+#    #+#             */
-/*   Updated: 2016/08/10 12:35:09 by aperraul         ###   ########.fr       */
+/*   Created: 2016/08/10 10:55:28 by aperraul          #+#    #+#             */
+/*   Updated: 2016/08/10 14:22:11 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libgraph.h"
+#include "../Header/header.h"
 
-t_matrix	ft_init_matrix(t_pt pos)
+void	ft_rtv1(t_rtv1 *rtv1)
 {
-	t_matrix	m;
+	int		x;
+	int		y;
+	t_3dptd	campos;
+	t_3dptd	b;
 
-	m.x = ft_make_vector(0.0f, 0.0f, 0.0f);
-	m.y = ft_make_vector(0.0f, 0.0f, 0.0f);
-	m.z = ft_make_vector(0.0f, 0.0f, 0.0f);
-	m.pos = pos;
-	return (m);
+	campos = ft_make_3dptd(0, 0, 0);
+	y = -1;
+	while (++y < rtv1->env->height)
+	{
+		x = -1;
+		while (++x < rtv1->env->withd)
+		{
+			b = ft_make_3dptd(x - (rtv1->env->withd / 2), y - (rtv1->env->height), -(rtv1->env->withd / -1.171198));
+
+		}
+	}
 }
+

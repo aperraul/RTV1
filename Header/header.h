@@ -6,7 +6,7 @@
 /*   By: aperraul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/14 13:04:44 by aperraul          #+#    #+#             */
-/*   Updated: 2016/06/24 18:36:12 by aperraul         ###   ########.fr       */
+/*   Updated: 2016/08/10 12:39:24 by aperraul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,8 @@ typedef struct	s_rtv1
 
 int				main(int argc, char **argv);
 t_rtv1			*ft_rtv1_init(void);
+t_env			*ft_sdl_init(int h, int w, char *title);
+void			ft_rtv1(t_rtv1 *rtv1);
 void			ft_get_scene(t_rtv1 *rtv1, int ret);
 int				ft_scene(t_lstline *list, t_rtv1 *rtv1, int *line_nb);
 int				ft_get_cam(t_lstline **list, t_rtv1 *rtv1, int *line_nb);
@@ -129,7 +131,7 @@ char			**ft_get_3d_val(char *line);
 int				ft_check_3d_value(char *tab);
 int				ft_syntaxe_error(int line_nb);
 int				ft_strcheck(char *str);
-int				ft_get_obj_val(t_rtv1 *rtv1, int type,
+int				ft_get_obj_val(t_rtv1 *rtv1, int type, 
 		t_lstline **list, int *nb_line);
 int				ft_get_spot(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
 int				ft_get_sphere(t_rtv1 *rtv1, t_lstline **list, int *line_nb);
